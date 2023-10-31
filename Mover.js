@@ -6,12 +6,18 @@
 //   }
 // }
 class Mover {
-  constructor() {
-    this.position = createVector();
-    this.velocity = createVector();
-    this.acceleration = createVector();
-    this.mass = 10;
+  // constructor() {
+  //   this.position = createVector();
+  //   this.velocity = createVector();
+  //   this.acceleration = createVector();
+  //   this.mass = 10;
 
+  // }
+  constructor() {
+    this.position = createVector(random(width), random(height));
+    this.velocity = createVector(0, 0);
+    this.acceleration = createVector(0, 0);
+    this.mass = 10;
   }
 }
  // mover.applyForce(wind); //or mover.applyForce(gravity);
@@ -24,9 +30,14 @@ class Mover {
  // mover.update();
  // this.velocity.add(this.acceleration);
 
-   applyForce(force) {
+  //  applyForce(force) {
+  //   this.acceleration.add(force);
+  // }
+  applyForce(force) {
+    force.div(mass);
     this.acceleration.add(force);
   }
+  
 
   if (mouseIsPressed) {//마우스와 상호작용
     let wind = createVector(0.5, 0);
