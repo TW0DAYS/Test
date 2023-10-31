@@ -5,3 +5,7 @@ class Mover {
     this.acceleration = createVector();
   }
 }
+  mover.applyForce(wind); //or mover.applyForce(gravity);
+  applyForce(force) {
+    this.acceleration = force;
+  }
