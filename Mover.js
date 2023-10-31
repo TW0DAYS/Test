@@ -13,3 +13,4 @@ class Mover {
   mover.applyForce(wind);
   mover.applyForce(gravity);
   mover.update();
+  this.velocity.add(this.acceleration);
