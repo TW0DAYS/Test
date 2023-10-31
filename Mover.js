@@ -124,9 +124,18 @@ class Mover {
 let moverA = new Mover();
 let moverB = new Mover();
 
-constructor() {
-  this.mass = 1;
-  this.position = createVector(width / 2, 30);
+// constructor() {
+//   this.mass = 1;
+//   this.position = createVector(width / 2, 30);
+
+//   this.velocity = createVector(0, 0);
+//   this.acceleration = createVector(0, 0);
+// }
+
+constructor(x, y, mass) {
+  this.mass = mass;
+  this.position = createVector(x, y);
+Now setting these variables with arguments
 
   this.velocity = createVector(0, 0);
   this.acceleration = createVector(0, 0);
