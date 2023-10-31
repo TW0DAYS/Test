@@ -1,8 +1,17 @@
+// class Mover {
+//   constructor() {
+//     this.position = createVector();
+//     this.velocity = createVector();
+//     this.acceleration = createVector();
+//   }
+// }
 class Mover {
   constructor() {
     this.position = createVector();
     this.velocity = createVector();
     this.acceleration = createVector();
+    this.mass = 10;
+
   }
 }
  // mover.applyForce(wind); //or mover.applyForce(gravity);
