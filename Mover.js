@@ -23,3 +23,9 @@ class Mover {
     let wind = createVector(0.5, 0);
     mover.applyForce(wind);
   }
+
+  update() {
+    this.velocity.add(this.acceleration);
+    this.position.add(this.velocity);
+    this.acceleration.mult(0);
+  }
