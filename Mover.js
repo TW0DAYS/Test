@@ -21,11 +21,11 @@ class Mover {
   }
 }
 
-    let moverA = new Mover();
-    let moverB = new Mover();
-    let wind = createVector(1, 0);
-    moverA.applyForce(wind);
-    moverB.applyForce(wind);
+    // let moverA = new Mover();
+    // let moverB = new Mover();
+    // let wind = createVector(1, 0);
+    // moverA.applyForce(wind);
+    // moverB.applyForce(wind);
  // mover.applyForce(wind); //or mover.applyForce(gravity);
   //applyForce(force) {
  //   this.acceleration = force;
@@ -52,7 +52,9 @@ class Mover {
   
 
   if (mouseIsPressed) {//마우스와 상호작용
-    let wind = createVector(0.5, 0);
+    // let wind = createVector(0.5, 0);
+    // mover.applyForce(wind);
+    let wind = createVector(0.01, 0);
     mover.applyForce(wind);
   }
 
