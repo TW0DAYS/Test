@@ -20,6 +20,12 @@ class Mover {
     this.mass = 10;
   }
 }
+
+    let moverA = new Mover();
+    let moverB = new Mover();
+    let wind = createVector(1, 0);
+    moverA.applyForce(wind);
+    moverB.applyForce(wind);
  // mover.applyForce(wind); //or mover.applyForce(gravity);
   //applyForce(force) {
  //   this.acceleration = force;
@@ -33,9 +39,15 @@ class Mover {
   //  applyForce(force) {
   //   this.acceleration.add(force);
   // }
+  // applyForce(force) {
+  //   force.div(mass);
+  //   this.acceleration.add(force);
+  // }
+
   applyForce(force) {
-    force.div(mass);
-    this.acceleration.add(force);
+    let f = force.copy();
+    f.div(this.mass);
+    this.acceleration.add(f);
   }
   
 
