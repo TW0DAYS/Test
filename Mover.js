@@ -10,7 +10,16 @@ class Mover {
  //   this.acceleration = force;
  //}
 
-  mover.applyForce(wind);
-  mover.applyForce(gravity);
-  mover.update();
-  this.velocity.add(this.acceleration);
+ // mover.applyForce(wind);
+ // mover.applyForce(gravity);
+ // mover.update();
+ // this.velocity.add(this.acceleration);
+
+   applyForce(force) {
+    this.acceleration.add(force);
+  }
+
+  if (mouseIsPressed) {//마우스와 상호작용
+    let wind = createVector(0.5, 0);
+    mover.applyForce(wind);
+  }
