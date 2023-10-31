@@ -132,12 +132,12 @@ class Mover {
 //   this.acceleration = createVector(0, 0);
 // }
 
-constructor(x, y, mass) {
-  this.mass = mass;
-  this.position = createVector(x, y);
-  this.velocity = createVector(0, 0);
-  this.acceleration = createVector(0, 0);
-}
+// constructor(x, y, mass) {
+//   this.mass = mass;
+//   this.position = createVector(x, y);
+//   this.velocity = createVector(0, 0);
+//   this.acceleration = createVector(0, 0);
+// }
 
-let moverA = new Mover(100, 30, 10);
-let moverB = new Mover(400, 30, 2);
+// let moverA = new Mover(100, 30, 10);
+// let moverB = new Mover(400, 30, 2);
