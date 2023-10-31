@@ -65,13 +65,13 @@
 //   }
 
 
-let gravity = createVector(0, 0.1);
-mover.applyForce(gravity);
+// let gravity = createVector(0, 0.1);
+// mover.applyForce(gravity);
 
-if (mouseIsPressed) {
-  let wind = createVector(0.1, 0);
-  mover.applyForce(wind);
-}
+// if (mouseIsPressed) {
+//   let wind = createVector(0.1, 0);
+//   mover.applyForce(wind);
+// }
 
 class Mover {
   constructor() {
@@ -135,8 +135,6 @@ class Mover {
 constructor(x, y, mass) {
   this.mass = mass;
   this.position = createVector(x, y);
-Now setting these variables with arguments
-
   this.velocity = createVector(0, 0);
   this.acceleration = createVector(0, 0);
 }
