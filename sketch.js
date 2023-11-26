@@ -4,6 +4,7 @@ let emitter;
 //{!1} One repeller
 let repeller;
 let att;
+let shape = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -32,4 +33,11 @@ function draw() {
 
   repeller.show();
   att.show();
+
+  function keyPressed() {
+    if (keyCode === LEFT_ARROW) {
+      shape = 0;
+    } else if (keyCode === RIGHT_ARROW) {
+      shape = 1;
+    }
 }
