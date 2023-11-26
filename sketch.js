@@ -5,6 +5,8 @@ let emitter;
 let repeller;
 let att;
 let shape = 0;
+let attPower = 0;
+let repellerPower;
 
 function setup() {
   createCanvas(400, 400);
@@ -16,8 +18,11 @@ function setup() {
 function draw() {
   background(255);
     
-  repeller.setPower(mouseX);
-  repeller.move(0.5);
+  repeller.setPower(repellerPower);
+  repeller.move(mouseX, mouseY);
+
+  att.move(mouseX, mouseY);
+  att.setPower(attPower);
   
   emitter.addParticle();
   emitter.addParticle();
@@ -34,10 +39,23 @@ function draw() {
   repeller.show();
   att.show();
 
-  function keyPressed() {
+}
+
+  function keyPressed() 
+  {
     if (keyCode === LEFT_ARROW) {
       shape = 0;
     } else if (keyCode === RIGHT_ARROW) {
       shape = 1;
     }
+  }
+
+function mousePressed() {
+  attPower = 200;
+  repellerPower = 0;
+}
+
+function mouseReleased() {
+  repellerPower = 200;
+  attPower = 0;
 }
