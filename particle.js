@@ -34,9 +34,16 @@ class Particle {
   // Method to display
   show() {
     stroke(0, this.lifespan);
-    strokeWeight(2);
-    fill(127, this.lifespan);
-    circle(this.position.x, this.position.y, 1);
+    strokeWeight(10);
+    fill(0, this.lifespan);
+    switch(shape) {
+      case 0 : circle(this.position.x, this.position.y, 1);
+        break;
+        
+      case 1 : rect(this.position.x, this.position.y, 1);
+        break;
+    
+    }
   }
 
   // Is the particle still useful?
